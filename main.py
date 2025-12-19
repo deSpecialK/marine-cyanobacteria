@@ -18,8 +18,9 @@ def compareData(lines_doc_1, lines_doc_2):
         while len(lines_doc_2) < len(lines_doc_1):
             lines_doc_2.append("")
     for i in range(len(lines_doc_1)):
-        if lines_doc_1[i] == lines_doc_2[i]:
-            sameLines = lines_doc_1[i]
+        for x in range(len(lines_doc_1)):
+            if lines_doc_1[i] == lines_doc_2[x]:
+                sameLines = lines_doc_1[i]
     return sameLines
 
 # write Data
