@@ -11,8 +11,17 @@ def loadData():
     return
 
 # Compare Data sets
-def compareData():
-    return
+def compareData(lines_doc_1, lines_doc_2):
+    if len(lines_doc_1) != len(lines_doc_2):
+        while len(lines_doc_1) < len(lines_doc_2):
+            lines_doc_1.append("")
+        while len(lines_doc_2) < len(lines_doc_1):
+            lines_doc_2.append("")
+    for i in range(len(lines_doc_1)):
+        for x in range(len(lines_doc_1)):
+            if lines_doc_1[i] == lines_doc_2[x]:
+                sameLines = lines_doc_1[i]
+    return sameLines
 
 # write Data
 def writeData(fileCyanoCompared):
