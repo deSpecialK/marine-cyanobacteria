@@ -11,7 +11,11 @@ def loadData():
     return
 
 # Compare Data sets
-def compareData()
-    
+def compareData():
+    return
+
+# write Data
+def writeData():
+    return
 
 ### MAIN ###
