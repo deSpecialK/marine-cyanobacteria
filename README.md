@@ -2,9 +2,10 @@
 Common project of Course 2025
 
 Contributors:
-* Julian
-* Cosima
-* Karsten
+* Julian Arctic sea (arctic_sea_JW)
+* Cosima Mediterranian sea (med_sea_CS)
+* Karsten 
+* Sophia
 
 ## Input data files should be saved as follows
 
