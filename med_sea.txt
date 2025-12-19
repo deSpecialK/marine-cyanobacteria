@@ -4,3 +4,11 @@ Synechococcus mediterraneus
 Trichodesmium erythraeum
 Trichodesmium thiebautii
 Richelia intracellularis
+Nostoc commune
+Anabaena oscillarioides
+Moorea producens
+Oscillatoria limosa
+Phormidium corium
+Microcoleus chthonoplastes
+Phormidium autumnale
+Hydrocoleum glutinosum
