@@ -27,13 +27,8 @@ def load_data(file_handle):
 
 # Compare Data sets
 def compareData(lines_doc_1, lines_doc_2):
-    if len(lines_doc_1) != len(lines_doc_2):
-        while len(lines_doc_1) < len(lines_doc_2):
-            lines_doc_1.append("")
-        while len(lines_doc_2) < len(lines_doc_1):
-            lines_doc_2.append("")
     for i in range(len(lines_doc_1)):
-        for x in range(len(lines_doc_1)):
+        for x in range(len(lines_doc_2)):
             if lines_doc_1[i] == lines_doc_2[x]:
                 sameLines = lines_doc_1[i]
     return sameLines
@@ -46,6 +41,7 @@ def writeData(fileCyanoCompared):
         bacterium=bacterium.strip()  #das hat den Umbruch nach jedem Element weggestript
         print(i, bacterium)
         i+=1
+        # datei.write(str(i) + name + "\n")
     return
 
 ### MAIN ###
