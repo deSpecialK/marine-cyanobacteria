@@ -11,29 +11,19 @@ Authors: Cosmima Schilling, Julian Weber, Sofia Kasek and Karsten Voigt
 
 # Variables definitions 
 
-# load Data from files, define separator if needed, delete header if needed
-def load_data(file_handle,sep=None, header=False):
+# load Data from files
+def load_data(file_handle):
+    # open the given file handle and read it line by line and close it
 	ohandle    = open(file_handle, 'r')
 	obuffer    = ohandle.readlines()
 	ohandle.close()
+    # define array for data
 	file_data   = []
-	head_info   = ""
-	if sep:
-		for i in obuffer:
-			if header:
-				header   = False
-				head_info = i
-				continue
-			atoms = string.split(i.strip("\n"), sep)
-			file_data.append(atoms)
-	else:
-		for i in obuffer:
-			if header:
-				header = False
-				head_info = i
-				continue
-			file_data.append(i.strip("\n"))
-	return file_data, head_info
+    # iterate over all lines in buffer and add it to the array
+	for i in obuffer:
+		file_data.append(i.strip("\n"))
+    # return the array
+	return file_data
 
 # Compare Data sets
 def compareData(lines_doc_1, lines_doc_2):
@@ -59,6 +49,6 @@ def writeData(fileCyanoCompared):
     return
 
 ### MAIN ###
-loadData()
+load_data()
 compareData()
 writeData()
