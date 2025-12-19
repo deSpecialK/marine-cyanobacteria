@@ -27,7 +27,7 @@ def compareData(lines_doc_1, lines_doc_2):
 def writeData(fileCyanoCompared):
     fileCyanoComparedLines=fileCyanoCompared.readlines()
     i=1
-    for cyanobacterium in fileCyanoComparedLines:
+    for bacterium in fileCyanoComparedLines:
         bacterium=bacterium.strip()  #das hat den Umbruch nach jedem Element weggestript
         print(i, bacterium)
         i+=1
