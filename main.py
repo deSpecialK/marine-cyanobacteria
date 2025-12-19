@@ -15,7 +15,13 @@ def compareData():
     return
 
 # write Data
-def writeData():
+def writeData(fileCyanoCompared):
+    fileCyanoComparedLines=fileCyanoCompared.readlines()
+    i=1
+    for cyanobacterium in fileCyanoComparedLines:
+        bacterium=bacterium.strip()  #das hat den Umbruch nach jedem Element weggestript
+        print(i, bacterium)
+        i+=1
     return
 
 ### MAIN ###
