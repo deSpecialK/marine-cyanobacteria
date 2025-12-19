@@ -6,8 +6,8 @@ Contributors:
 * Cosima
 * Karsten
 
-## Input data files should be saves as follows
+## Input data files should be saved as follows
 
-* <<region of interest>>.txt
+* <i> region of interest </i>.txt
 * One line per species
 * species in latin names
