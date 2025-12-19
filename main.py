@@ -31,6 +31,7 @@ def writeData(fileCyanoCompared):
         bacterium=bacterium.strip()  #das hat den Umbruch nach jedem Element weggestript
         print(i, bacterium)
         i+=1
+        # datei.write(str(i) + name + "\n")
     return
 
 ### MAIN ###
