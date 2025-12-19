@@ -37,15 +37,21 @@ def compareData(lines_doc_1, lines_doc_2):
 
 # write Data
 def writeData(fileCyanoCompared):
-    i=1
+    i=0
     output_file = "index.html"
     print("Writing to file:", output_file)
-    open(output_file, "w")
+    obuffer=open(output_file, "w")
+    obuffer.write("<h2> Vergleich Cyanobakterien nach Ort </h2> \n")
+    obuffer.write("<p> </p> \n")
+    obuffer.write("<body> \n")
     for bacterium in fileCyanoCompared:
         bacterium=bacterium.strip()  #das hat den Umbruch nach jedem Element weggestript
-        print(i, bacterium)
         i+=1
-        # datei.write(str(i) + name + "\n")
+        # print(i, bacterium)
+        oline=str("<p>"+str(i)+" "+bacterium+"</p>"+"\n")
+        obuffer.write(oline)
+    obuffer.write("</body> \n")
+    obuffer.close()
     return
 
 ### MAIN ###
@@ -55,6 +61,6 @@ doc_3 =load_data("saragossa_sea.txt")
 same1_2 = compareData(doc_1, doc_2)
 same2_3 = compareData(doc_2, doc_3)
 same1_3 = compareData(doc_1, doc_3)
-writeData(same1_2)
+#writeData(same1_2)
 writeData(same2_3)
-writeData(same1_3)
+#writeData(same1_3)
