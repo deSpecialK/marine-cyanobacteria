@@ -1,7 +1,6 @@
 Prochlorococcus marinus
 Synechococcus elongatus
 Synechococcus bacillaris
-Synechococcus spp.
 Trichodesmium erythraeum
 Trichodesmium thiebautii
 Crocosphaera watsonii
