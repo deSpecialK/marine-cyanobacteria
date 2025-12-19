@@ -11,6 +11,7 @@ Authors: Cosmima Schilling, Julian Weber, Sofia Kasek and Karsten Voigt
 
 # Variables definitions 
 
+
 # load Data from files
 def load_data(file_handle):
     # open the given file handle and read it line by line and close it
@@ -27,17 +28,20 @@ def load_data(file_handle):
 
 # Compare Data sets
 def compareData(lines_doc_1, lines_doc_2):
-    for i in range(len(lines_doc_1)):
-        for x in range(len(lines_doc_2)):
-            if lines_doc_1[i] == lines_doc_2[x]:
-                sameLines = lines_doc_1[i]
+    sameLines = []
+    for i in lines_doc_1:
+        for x in lines_doc_2:
+            if i == x:
+                sameLines.append(i)
     return sameLines
 
 # write Data
 def writeData(fileCyanoCompared):
-    fileCyanoComparedLines=fileCyanoCompared.readlines()
     i=1
-    for bacterium in fileCyanoComparedLines:
+    output_file = "index.html"
+    print("Writing to file:", output_file)
+    open(output_file, "w")
+    for bacterium in fileCyanoCompared:
         bacterium=bacterium.strip()  #das hat den Umbruch nach jedem Element weggestript
         print(i, bacterium)
         i+=1
@@ -45,6 +49,12 @@ def writeData(fileCyanoCompared):
     return
 
 ### MAIN ###
-load_data()
-compareData()
-writeData()
+doc_1 =load_data("arctic_sea.txt")
+doc_2 =load_data("med_sea.txt")
+doc_3 =load_data("saragossa_sea.txt")
+same1_2 = compareData(doc_1, doc_2)
+same2_3 = compareData(doc_2, doc_3)
+same1_3 = compareData(doc_1, doc_3)
+writeData(same1_2)
+writeData(same2_3)
+writeData(same1_3)
