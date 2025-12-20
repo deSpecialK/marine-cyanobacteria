@@ -55,9 +55,9 @@ def writeData(fileCyanoCompared):
     return
 
 ### MAIN ###
-doc_1 =load_data("arctic_sea.txt")
-doc_2 =load_data("med_sea.txt")
-doc_3 =load_data("saragossa_sea.txt")
+doc_1   = load_data("arctic_sea.txt")
+doc_2   = load_data("med_sea.txt")
+doc_3   = load_data("saragossa_sea.txt")
 same1_2 = compareData(doc_1, doc_2)
 same2_3 = compareData(doc_2, doc_3)
 same1_3 = compareData(doc_1, doc_3)
