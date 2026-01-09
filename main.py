@@ -15,16 +15,17 @@ Authors: Cosmima Schilling, Julian Weber, Sofia Kasek and Karsten Voigt
 # load Data from files
 def load_data(file_handle):
     # open the given file handle and read it line by line and close it
-	ohandle    = open(file_handle, 'r')
-	obuffer    = ohandle.readlines()
-	ohandle.close()
+    ohandle     = open(file_handle, 'r')
+    obuffer     = ohandle.readlines()
+    origin_name = file_handle.split(".")[0]
+    ohandle.close()
     # define array for data
-	file_data   = []
+    file_data   = []
     # iterate over all lines in buffer and add it to the array
-	for i in obuffer:
-		file_data.append(i.strip("\n"))
+    for i in obuffer:
+	    file_data.append(i.strip("\n"))
     # return the array
-	return file_data
+    return file_data, origin_name
 
 # Compare Data sets
 def compareData(lines_doc_1, lines_doc_2):
@@ -55,9 +56,9 @@ def writeData(fileCyanoCompared):
     return
 
 ### MAIN ###
-doc_1   = load_data("arctic_sea.txt")
-doc_2   = load_data("med_sea.txt")
-doc_3   = load_data("saragossa_sea.txt")
+doc_1   = load_data("arctic_sea.txt")[0]
+doc_2   = load_data("med_sea.txt")[0]
+doc_3   = load_data("saragossa_sea.txt")[0]
 same1_2 = compareData(doc_1, doc_2)
 same2_3 = compareData(doc_2, doc_3)
 same1_3 = compareData(doc_1, doc_3)
