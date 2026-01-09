@@ -5,3 +5,4 @@ Trichodesmium erythraeum
 Trichodesmium thiebautii
 Crocosphaera watsonii
 Richelia intracellularis
+Anabaena oscillarioides
