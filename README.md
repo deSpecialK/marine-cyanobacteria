@@ -7,6 +7,9 @@ Contributors:
 * Karsten 
 * Sofia
 
+## To do:
+* extract origin names and publish it
+
 ## Input data files should be saved as follows
 
 * <i> region of interest </i>.txt
