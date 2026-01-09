@@ -1,7 +1,6 @@
 Nostoc commune
-Anabaena
-Phormidium
-Leptolyngbya
-Calothrix
-Dulcicalothrix
-Oscillatoria
+Anabaena oscillarioides
+Phormidium corium
+Leptolyngbya sieminskae
+Calothrix scopulorum
+Oscillatoria limosa
