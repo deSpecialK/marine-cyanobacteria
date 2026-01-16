@@ -23,18 +23,18 @@ def load_data(file_handle):
     file_data   = []
     # iterate over all lines in buffer and add it to the array
     for i in obuffer:
-	    file_data.append(i.strip("\n"))
+        file_data.append(i.strip("\n"))
     # return the array
-    return file_data, origin_name
+    return file_data,origin_name
 
 # Compare Data sets
 def compareData(lines_doc_1, lines_doc_2):
     sameLines = []
-    for i in lines_doc_1:
-        for x in lines_doc_2:
+    for i in lines_doc_1[0]:
+        for x in lines_doc_2[0]:
             if i == x:
                 sameLines.append(i)
-    return sameLines
+    return sameLines, lines_doc_1[1], lines_doc_2[1]
 
 # write Data
 def writeData(fileCyanoCompared):
@@ -45,7 +45,9 @@ def writeData(fileCyanoCompared):
     obuffer.write("<h2> Vergleich Cyanobakterien nach Ort </h2> \n")
     obuffer.write("<p> </p> \n")
     obuffer.write("<body> \n")
-    for bacterium in fileCyanoCompared:
+    obuffer.write("<p> </p> \n")
+    obuffer.write("<p>Vergleich von "+fileCyanoCompared[1]+" und "+fileCyanoCompared[2]+" </p> \n")
+    for bacterium in fileCyanoCompared[0]:
         bacterium=bacterium.strip()  #das hat den Umbruch nach jedem Element weggestript
         i+=1
         # print(i, bacterium)
@@ -56,9 +58,9 @@ def writeData(fileCyanoCompared):
     return
 
 ### MAIN ###
-doc_1   = load_data("arctic_sea.txt")[0]
-doc_2   = load_data("med_sea.txt")[0]
-doc_3   = load_data("saragossa_sea.txt")[0]
+doc_1   = load_data("arctic_sea.txt")
+doc_2   = load_data("med_sea.txt")
+doc_3   = load_data("saragossa_sea.txt")
 same1_2 = compareData(doc_1, doc_2)
 same2_3 = compareData(doc_2, doc_3)
 same1_3 = compareData(doc_1, doc_3)
